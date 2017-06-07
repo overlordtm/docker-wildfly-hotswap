@@ -4,8 +4,6 @@ ENV WILDFLY_VERSION 10.1.0.Final
 ENV WILDFLY_SHA1 9ee3c0255e2e6007d502223916cefad2a1a5e333
 ENV JBOSS_HOME /opt/jboss/wildfly
 
-ENV JAVA_OPTS "-XXaltjvm=dcevm -javaagent:/opt/HotswapAgent/HotswapAgent-1.0.0.jar"
-
 RUN echo "ipv6" >> /etc/modules
 RUN apk upgrade --update
 RUN apk add curl
