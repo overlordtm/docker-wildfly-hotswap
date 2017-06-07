@@ -9,7 +9,7 @@ RUN apk upgrade --update
 RUN apk add curl
 
 RUN mkdir -p /opt/HotswapAgent/ \
-    && curl -s -o -L /opt/HotswapAgent/HotswapAgent-1.0.0.jar https://github.com/HotswapProjects/HotswapAgent/releases/download/1.0/hotswap-agent-1.0.jar
+    && curl -s -L -o /opt/HotswapAgent/HotswapAgent-1.0.0.jar https://github.com/HotswapProjects/HotswapAgent/releases/download/1.0/hotswap-agent-1.0.jar
 
 RUN cd $HOME \
     && curl -O https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz \
